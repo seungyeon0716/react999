@@ -8,7 +8,14 @@ function Contact (){
         <div>
             <Header />
             <Contents>
-               contents
+                <section id="mainCont">
+                    <h2 class="sr-only">연락처 컨텐츠 영역입니다.</h2>
+                    <div class="main__cont">
+                        <div class="l1">You are</div>
+                        <div class="l2">already </div>
+                        <div class="l3">doing well.</div>
+                    </div>
+                </section>
             </Contents>
 
         <Footer />
