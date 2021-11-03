@@ -1,16 +1,18 @@
 import React from 'react';
-import Footer from '../layouts/Footer';
 import Header from '../layouts/Header';
+import Footer from '../layouts/Footer';
 import Contents from '../layouts/Contents';
+import { Link } from 'react-router-dom';
 
-function ReferenceDetail(){
+
+function Referdetail (){
     return (
         <div>
             <Header />
             <Contents>
                 <section id="referCont">
-                    <div className="container">
-                        <div className="refer__detail pt200">
+                    <div class="container">
+                        <div class="refer__detail pt200">
                             <h3>&lt;a&gt;</h3>
                             <p>&lt;a&gt; 태그는 다른 페이지 이동을 설정합니다.</p>
                             <table>
@@ -54,13 +56,26 @@ function ReferenceDetail(){
                                 <li>원칙적으로 &lt;a&gt; 태그는 블록구조를 포함 할 수 없지만, HTML5에서는 &lt;a&gt; 태그는 블록 요소를 포함할 수 있습니다.&lt;/a&gt;</li>
                                 <li>href='#'의 페이지 지정을 막기 위해 javascript:void(0)를 사용하는 것보다 &lt;button&gt; 태그를 사용하는 것이 바람직합니다.&lt;/a&gt;</li>
                             </ul>
-                            <a className="list-btn" href="reference.html">목록보기</a>
+                            <Link to="/Reference" className="list-btn">목록보기</Link>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section id="contactInfo">
+                    <div class="contact__info">
+                        <div>
+                            <p>Let's create something new</p>
+                            <h3>LET`S Get IN<br />TOUCH</h3>
+                            <Link to="/contact" class="contact">Contact Me</Link>
                         </div>
                     </div>
                 </section>
             </Contents>
-        <Footer />
-    </div>
+            <Footer />
+        </div>
     )
+
 }
-export default ReferenceDetail;
+
+export default Referdetail;
