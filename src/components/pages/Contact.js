@@ -3,6 +3,16 @@ import Footer from '../layouts/Footer';
 import Header from '../layouts/Header';
 import Contents from '../layouts/Contents';
 
+function Info({text}){
+    return <div>{text}</div>
+}
+
+const textInfo = [
+    {text : "You are"},
+    {text : "already"},
+    {text : "doing well."},
+]
+
 function Contact (){
     return (
         <div>
@@ -10,10 +20,10 @@ function Contact (){
             <Contents>
                 <section id="mainCont">
                     <h2 class="sr-only">연락처 컨텐츠 영역입니다.</h2>
-                    <div class="main__cont">
-                        <div class="l1">You are</div>
-                        <div class="l2">already </div>
-                        <div class="l3">doing well.</div>
+                    <div class="main__cont tact">
+                        {textInfo.map((info) => (
+                            <Info text = {info.text} key={info.text} />
+                        ))}
                     </div>
                 </section>
             </Contents>
