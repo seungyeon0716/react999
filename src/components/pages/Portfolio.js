@@ -7,6 +7,7 @@ import ContInfo from '../layouts/ContInfo';
 import PortInfo from '../info/PortInfo';
 
 import axios from 'axios';
+import Loading from '../layouts/Loading';
 
 //함수형 컴퍼넌트 -> 권유 클래스 컴퍼넌트 -> 동기/비동기 -> 콜백함수
 //함수형 컴퍼넌트 -> 리액트 훅(useEffect)
@@ -41,9 +42,7 @@ class Portfolio extends React.Component {
         return (
             <div>
                 {isLoading ? (
-                    <div className="loading">
-                        <span>로딩중..</span>
-                    </div>
+                    <Loading />
                 ) :( 
                     <div>
                         <Header />
