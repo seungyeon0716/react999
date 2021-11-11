@@ -1126,16 +1126,19 @@ select {
 .refer__cont .table h3 {
   padding-bottom: 10px;
 }
+.refer__cont .table ul {
+  border-top: 1px solid #fff;
+}
 .refer__cont .table li {
   margin: 0;
   list-style: none;
-  border-top: 1px solid #000;
+  border-bottom: 1px solid #fff;
   position: relative;
   transition: all 0.3s;
   overflow: hidden;
 }
 .refer__cont .table li:hover {
-  background: rgba(0, 0, 0, 0.081);
+  background: rgba(255, 255, 255, 0.1);
 }
 .refer__cont .table li span {
   display: inline-block;
@@ -1153,10 +1156,10 @@ select {
   width: 10%;
 }
 .refer__cont .table li span:nth-child(3) {
-  width: 75%;
+  width: 70%;
 }
 .refer__cont .table li span:nth-child(4) {
-  width: 8%;
+  width: 15%;
 }
 
 .refer__detail {
@@ -1169,16 +1172,17 @@ select {
   margin-bottom: 10px;
 }
 .refer__detail p {
-  background: #000;
+  background: #ffff;
   padding: 22px 20px 20px 20px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #000;
 }
 .refer__detail table {
   font-family: "SCoreDream";
   width: 100%;
   border: 1px solid #dad8d1;
   text-align: left;
+  color: #fff;
 }
 .refer__detail table td,
 .refer__detail table th {
