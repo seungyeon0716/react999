@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function ReferInfo3({link,id,title,desc1,desc2,return1,definition}) {
     return (
         <li>
-            <Link to={{ pathname: "ReferDetail3", state: {link,id,title,desc1,desc2,return1,definition}}}>
+            <Link to={{ pathname: "ReferDetail", state: {link,id,title,desc1,desc2,return1,definition}}}>
                 <span className="num">{id}</span>
                 <span className="attr">{title}</span>
                 <span className="desc">{desc2}</span>

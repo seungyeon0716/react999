@@ -12,7 +12,7 @@ import ContInfo from '../layouts/ContInfo';
 //         return()
 // }
 
-class ReferDetail3 extends React.Component {
+class ReferDetail extends React.Component {
     componentDidMount(){
         const { location, history } = this.props;
         if( location.state === undefined ){

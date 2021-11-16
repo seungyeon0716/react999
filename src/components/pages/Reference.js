@@ -34,6 +34,7 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://seungyeon0716.github.io/react999/src/assets/json/referCSS.json");
         this.setState({refers2 : cssRefer, isLoading : false});
+        
 
         const {
             data: {
