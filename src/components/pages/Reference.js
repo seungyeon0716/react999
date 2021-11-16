@@ -41,7 +41,7 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://seungyeon0716.github.io/react999/src/assets/json/referJs.json");
         this.setState({refers3 : jsRefer, isLoading : false});
-        // console.log(htmlRefer);
+        // console.log(jsRefer);
     }
 
     changeMenu = (menuIndex) =>{
