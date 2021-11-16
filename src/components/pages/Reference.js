@@ -34,7 +34,7 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://seungyeon0716.github.io/react999/src/assets/json/referCSS.json");
         this.setState({refers2 : cssRefer, isLoading : false});
-        
+
 
         const {
             data: {
@@ -119,6 +119,7 @@ class Reference extends React.Component {
                                                         desc1={refer.desc1}
                                                         desc2={refer.desc2}
                                                         return1={refer.return1}
+                                                        parameters={refer.parameters}
                                                         definition={refer.definition}
                                                     />
                                                 ))}

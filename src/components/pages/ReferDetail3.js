@@ -59,6 +59,10 @@ class ReferDetail extends React.Component {
                                             <th>반환값</th>
                                             <td>{location.state.return1}</td>
                                         </tr>
+                                        <tr>
+                                            <th>매개변수</th>
+                                            <td>{location.state.parameters}</td>
+                                        </tr>
                                     </tbody>
                                 </table>
 
