@@ -12,7 +12,7 @@ import ContInfo from '../layouts/ContInfo';
 //         return()
 // }
 
-class ReferDetail extends React.Component {
+class ReferDetail2 extends React.Component {
     componentDidMount(){
         const { location, history } = this.props;
         if( location.state === undefined ){
@@ -56,12 +56,12 @@ class ReferDetail extends React.Component {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th>요소</th>
-                                            <td>{location.state.element}</td>
+                                            <th>기본값</th>
+                                            <td>{location.state.default1}</td>
                                         </tr>
                                         <tr>
-                                            <th>닫는 태그</th>
-                                            <td>{location.state.tag}</td>
+                                            <th>적용</th>
+                                            <td>{location.state.apply}</td>
                                         </tr>
                                         <tr>
                                             <th>버전</th>
