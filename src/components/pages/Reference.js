@@ -7,6 +7,7 @@ import Footer from '../layouts/Footer';
 import Loading from '../layouts/Loading';
 import ReferInfo from '../info/ReferInfo';
 import ReferInfo2 from '../info/ReferInfo2';
+import ReferInfo3 from '../info/ReferInfo3';
 import WrapTitle from '../layouts/WrapTitle';
 import ContInfo from '../layouts/ContInfo';
 
@@ -15,7 +16,8 @@ class Reference extends React.Component {
         isLoading: true,
         menu: 0,
         refers: [],
-        refers2: []
+        refers2: [],
+        refers3: []
     }
 
     getRefer = async () => {
@@ -32,6 +34,13 @@ class Reference extends React.Component {
             },
         } = await axios.get("https://seungyeon0716.github.io/react999/src/assets/json/referCSS.json");
         this.setState({refers2 : cssRefer, isLoading : false});
+
+        const {
+            data: {
+                data : {jsRefer},
+            },
+        } = await axios.get("https://seungyeon0716.github.io/react999/src/assets/json/referJs.json");
+        this.setState({refers3 : jsRefer, isLoading : false});
         // console.log(htmlRefer);
     }
 
@@ -46,7 +55,7 @@ class Reference extends React.Component {
     }
 
     render(){
-        const {isLoading, refers,refers2} = this.state;
+        const {isLoading, refers,refers2,refers3} = this.state;
         return (
             <div>
                 {isLoading ? (
@@ -100,7 +109,18 @@ class Reference extends React.Component {
                                                 ))}
                                             </ul>
                                             <ul className={`${this.state.menu === 2? 'show': ''}`}>
-                                                test3
+                                                {refers3.map((refer) => (
+                                                    <ReferInfo3 
+                                                        key={refer.id}
+                                                        link={refer.link}
+                                                        id={refer.id}
+                                                        title={refer.title}
+                                                        desc1={refer.desc1}
+                                                        desc2={refer.desc2}
+                                                        return1={refer.return1}
+                                                        definition={refer.definition}
+                                                    />
+                                                ))}
                                             </ul>
                                         </div>
                                     </div>
